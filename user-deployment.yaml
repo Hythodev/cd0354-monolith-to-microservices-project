@@ -12,9 +12,17 @@ spec:
       labels:
         run: user
     spec:
+      restartPolicy: Always
       containers:
       - name: user
-        image: shaddev/udagram-api-user
+        image: shaddev/udagram-api-user:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: env-config
+        - secretRef:
+            name: env-secret
+        - secretRef:
+            name: aws-secret

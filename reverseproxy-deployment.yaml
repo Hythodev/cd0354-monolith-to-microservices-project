@@ -12,9 +12,11 @@ spec:
       labels:
         run: reverseproxy
     spec:
+      restartPolicy: Always
       containers:
       - name: reverseproxy
-        image: shaddev/reverseproxy
+        image: shaddev/reverseproxy:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+
