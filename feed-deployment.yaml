@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: feed
+spec:
+  selector:
+    matchLabels:
+      run: feed
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: feed
+    spec:
+      containers:
+      - name: feed
+        image: shaddev/udagram-api-feed
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: reverseproxy
+spec:
+  selector:
+    matchLabels:
+      run: reverseproxy
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: shaddev/reverseproxy
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

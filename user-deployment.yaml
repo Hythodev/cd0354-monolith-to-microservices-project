@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: user
+spec:
+  selector:
+    matchLabels:
+      run: user
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: user
+    spec:
+      containers:
+      - name: user
+        image: shaddev/udagram-api-user
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
