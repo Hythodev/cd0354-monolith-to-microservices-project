@@ -15,7 +15,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: user
-        image: shaddev/udagram-api-user:v1
+        image: shaddev/udagram-api-user:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 80

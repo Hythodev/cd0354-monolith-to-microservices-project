@@ -36,14 +36,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: docker build
         run: |
-          docker build ./udagram-reverseproxy -t shaddev/reverseproxy:v1
-          docker build ./udagram-api-user -t shaddev/udagram-api-user:v1
-          docker build ./udagram-api-feed -t shaddev/udagram-api-feed:v1
-          docker build ./udagram-frontend -t shaddev/udagram-frontend:v1
+          docker build ./udagram-reverseproxy -t shaddev/reverseproxy:v2
+          docker build ./udagram-api-user -t shaddev/udagram-api-user:v2
+          docker build ./udagram-api-feed -t shaddev/udagram-api-feed:v2
+          docker build ./udagram-frontend -t shaddev/udagram-frontend:v2
       
       - name: docker push
         run: |
           docker push shaddev/reverseproxy:v1
-          docker push shaddev/udagram-api-user:v1
-          docker push shaddev/udagram-api-feed:v1
-          docker push shaddev/udagram-frontend:v1
+          docker push shaddev/udagram-api-user:v2
+          docker push shaddev/udagram-api-feed:v2
+          docker push shaddev/udagram-frontend:v2

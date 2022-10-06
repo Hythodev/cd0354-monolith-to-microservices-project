@@ -15,7 +15,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: feed
-        image: shaddev/udagram-api-feed:v1
+        image: shaddev/udagram-api-feed:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
