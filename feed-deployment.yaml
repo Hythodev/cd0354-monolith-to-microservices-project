@@ -16,6 +16,10 @@ spec:
       containers:
       - name: feed
         image: shaddev/udagram-api-feed:v2
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
         imagePullPolicy: Always
         ports:
         - containerPort: 80
