@@ -16,9 +16,12 @@ spec:
       - name: frontend
         image: shaddev/udagram-frontend:v2
         resources:
-          limits:
+          requests:
             memory: "128Mi"
-            cpu: "200m"
+            cpu: "250m"
+          limits:
+            memory: "250Mi"
+            cpu: "500m"
         imagePullPolicy: Always
         ports: 
         - containerPort: 80

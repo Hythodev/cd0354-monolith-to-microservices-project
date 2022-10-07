@@ -17,8 +17,11 @@ spec:
       - name: feed
         image: shaddev/udagram-api-feed:v2
         resources:
-          limits:
+          requests:
             memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "250Mi"
             cpu: "500m"
         imagePullPolicy: Always
         ports:
